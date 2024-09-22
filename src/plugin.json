@@ -1,0 +1,31 @@
+{
+  "active": true,
+  "hubId": "anythingllm-skill-ls",
+  "name": "ls",
+  "schema": "skill-1.0.0",
+  "version": "1.0.0",
+  "description": "Lists files and directories, allowing the agent to inspect its machine’s local file system autonomously",
+  "author": "@Jaid",
+  "author_url": "https://github.com/Jaid",
+  "license": "MIT",
+  "examples": [
+    {
+      "prompt": "Give me the PowerShell profile file",
+      "call": "{\"path\": \"/app/users/jaid/powershell/profile.ps1\"}"
+    },
+    {
+      "prompt": "List all files in the logs directory",
+      "call": "{\"path\": \"/app/logs\"}"
+    }
+  ],
+  "entrypoint": {
+    "file": "handler.js",
+    "params": {
+      "path": {
+        "description": "Path to the file or directory",
+        "type": "string"
+      }
+    }
+  },
+  "imported": true
+}
