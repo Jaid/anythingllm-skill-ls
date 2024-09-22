@@ -1,4 +1,5 @@
 {
+  "$schema": "../etc/plugin_manifest_schema.json",
   "active": true,
   "hubId": "anythingllm-skill-ls",
   "name": "ls",
